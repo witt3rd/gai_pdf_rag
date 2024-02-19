@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "pdf_rag"
+version = "0.1.0"
+description = ""
+authors = ["Donald Thompson <donald@linkedin.com>"]
+readme = "README.md"
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+chromadb = "*"
+langchain = "*"
+langchain-cli = { version = ">=0.0.15", optional = true }
+langchain-community = "*"
+langchain-openai = "*"
+langserve = { extras = ["all"], version = ">=0.0.30" }
+loguru = "*"
+openai = "*"
+pydantic = "<2"
+python = "^3.11"
+python-dotenv = "*"
+redis = { extras = ["hiredis"], version = "*" }
+tiktoken = "*"
+unstructured = { extras = ["all-docs"], version = "*" }
+uvicorn = "^0.23.2"
+
+[tool.poetry.group.dev.dependencies]
+langchain-cli = ">=0.0.15"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
